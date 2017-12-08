@@ -1,15 +1,21 @@
 
 import chuckAPI from './index';
 
-it('should be a valid object', () => {
+test('should be a valid object', () => {
   expect(chuckAPI).toBeDefined();
 });
 
-it('should contain the expected methods', () => {
-  expect(chuckAPI).toBe(expect.objectContaining({
-    categories: expect.any(Function),
-    randomChuck: expect.any(Function),
-    randomChuckWithCategory: expect.any(Function),
-    search: expect.any(Function),
-  }));
+test('should contain the expected properties', () => {
+  expect(chuckAPI).toHaveProperty('categories');
+  expect(chuckAPI).toHaveProperty('randomChuckWithCategory');
+  expect(chuckAPI).toHaveProperty('search');
+});
+
+test('should return an array when asking for categories', () => {
+  const result = chuckAPI.categories();
+  expect(result).toHaveProperty('result');
+  expect(result).toHaveProperty('error');
+  expect(result.error).toBeNull();
+  expect(result.result).not.toBeNull();
+  expect(result.result).toBe(expect.any(Array));
 });
