@@ -1,6 +1,6 @@
 
 # Reffind Tech Task
-I have chosen to build the solution in ReactJS as I know this well and feel it will demonstrate my skills at organising code without the need to spend time learning a new framework and any unique structure techniques in that other framework.
+I have chosen to build the solution in ReactJS as I know this well and feel it will demonstrate my skills at organising code without the need to spend time learning a new framework and any unique structuring techniques in that other framework.
 
 ## Use of create-react-app
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
@@ -16,8 +16,8 @@ As this application is not being deployed to production, the service worker used
 
 There are also other considerations with regard to disabling this that can be viewed at the following page: https://goo.gl/KwvDNy
 
-## api.chucknorris.io
-I had originally considered using `fetch` to query the site but quickly discovered there was an `npm` package available (`chucknorris-io`) and so decided to use this to reduce the development time.
+## Additional NPM Packages Used
+- axios - for retrieving the the data from the site
 
 ## User Interface Requirements
 I am repeating the UI requirements here to ensure that none of them are missed and can serve as documentation to the project:
