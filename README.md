@@ -19,7 +19,7 @@ There are also other considerations with regard to disabling this that can be vi
 ## api.chucknorris.io
 I had originally considered using `fetch` to query the site but quickly discovered there was an `npm` package available (`chucknorris-io`) and so decided to use this to reduce the development time.
 
-## User Interface requirements
+## User Interface Requirements
 I am repeating the UI requirements here to ensure that none of them are missed and can serve as documentation to the project:
 
 - [ ] Do a free text search
