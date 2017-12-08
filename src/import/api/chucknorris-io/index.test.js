@@ -13,9 +13,8 @@ test('should contain the expected properties', () => {
 
 test('should return an array when asking for categories', () => {
   const result = chuckAPI.categories();
-  expect(result).toHaveProperty('result');
+  expect(result).toHaveProperty('categories');
   expect(result).toHaveProperty('error');
   expect(result.error).toBeNull();
-  expect(result.result).not.toBeNull();
-  expect(result.result).toBe(expect.any(Array));
+  expect(Array.isArray(result.categories)).toBe(true);
 });
