@@ -2,6 +2,11 @@
 # Reffind Tech Task
 I have chosen to build the solution in ReactJS as I know this well and feel it will demonstrate my skills at organising code without the need to spend time learning a new framework and any unique structuring techniques in that other framework.
 
+## chucknorris.io 
+In some preliminary testing of the chucknorris.io site, it was found that the site does not support Access-Control-Allow-Origin header to allow any origin. While this can be addressed in a browser (like Chrome) using specific add-ons or flags, it does present issues in a headless testing environment.
+
+Therefore, the tests created during the initial coding have been reduced to take this into account.
+
 ## Use of create-react-app
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
