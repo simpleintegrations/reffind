@@ -16,6 +16,8 @@ class App extends Component {
             <img 
               src="http://www.animatedimages.org/data/media/1387/animated-ninja-image-0002.gif" 
               border="0" 
+              width="70px"
+              height="70px"
               alt="animated ninja 0002"
             />
           </a>

@@ -63,4 +63,6 @@ TBD
 TBD
 
 ## Attribution
-- animated-ninja-image-0002.gif sourced from www.animatedimages.organising
+- animated-ninja-image-0002.gif sourced from http://www.animatedimages.org
+- oops.gif sources from https://sh-illustration.deviantart.com/art/Ninja-Fail-458139192
+- wise_ninja.gif from https://giphy.com/stickers/spy-kids-tULYT0Nx2pkWI
