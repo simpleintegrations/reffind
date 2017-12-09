@@ -6,6 +6,7 @@
 
 .chuck-input {
   padding: 5px;
+  margin-bottom: 5px;
 }
 
 .chuck-input input {
@@ -14,9 +15,28 @@
   font-size: 28px;
 }
 
+.chuck-input .field {
+  margin-bottom: 5px;
+}
+
+.chuck-input .buttons {
+  margin-bottom: 5px;
+}
+
 .chuck-input button {
-  width: 50%;
+  position: relative;
+  width: 49%;
   height: 32px;
+}
+
+.chuck-input .buttons .search {
+  float: left;
+  margin-left: 5px;
+}
+
+.chuck-input .buttons .clear {
+  float: right;
+  margin-right: 5px;
 }
 
 .chuck-result {
@@ -75,11 +95,13 @@
 }
 
 .chuck-category-wrapper:hover {
-  border: 1px solid #C00;
+  border: 1px solid #900;
   border-radius: 7px;
-  top: -1px;
+  top: 1px;
   left: 1px;
   color: red;
+  cursor: pointer;
+  box-shadow: 2px 2px #666;
 }
 
 .chuck-category-wrapper.rune1 {
@@ -152,9 +174,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: #EEE;
+  background-color: #FFF;
   width: 100%;
-  opacity: 0.7;
+  line-height: 50px;
+  opacity: 0.6;
   font-size: larger;
   font-weight: bold;
 }
