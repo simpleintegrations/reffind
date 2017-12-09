@@ -89,7 +89,6 @@ async function search(query) {
 
   await axios.get(url)
     .then(response => {
-      console.log('search respose:',response);
       result.facts = response.data.result ? response.data.result : [];
     })
     .catch(error => {

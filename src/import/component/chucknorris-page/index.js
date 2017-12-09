@@ -34,7 +34,6 @@ export class ChuckNorrisPage extends Component {
   }
   
   onSearch = (query) => {
-    console.log('ChuckNorrisPage onSearch:',{query});
     this.setState({ query, loading: true, facts: null, error: null, category: null },()=>{
       chuckAPI.search(this.state.query)
         .then(stateUpdate => {
@@ -44,7 +43,6 @@ export class ChuckNorrisPage extends Component {
   }
   
   onClear = () => {
-    console.log('ChuckNorrisPage onClear');
     this.setState({ loading: false, facts: null, error: null, category: null, query: '' });
   }
   

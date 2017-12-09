@@ -8,7 +8,6 @@ import Wisdom from '../common/wisdom';
 import Oops from '../common/oops';
 
 export const Results = (props) => {
-  console.log('Results:',props);
   let stateImage = null;
   if (props.loading) stateImage = <Loading />;
   else if (props.facts === null) stateImage = <Wisdom />;
