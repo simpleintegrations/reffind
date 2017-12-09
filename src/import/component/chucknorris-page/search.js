@@ -1,5 +1,4 @@
 
-
 import React, { Component } from 'react';
 
 export class SearchInput extends Component {
@@ -9,6 +8,15 @@ export class SearchInput extends Component {
     this.state = {
       query: props.query,
     };
+  }
+  componentWillReceiveProps(next)
+  {
+    const { props: past } = this;
+    if(next.query !== past.query)
+    {
+      const { query } = next;
+      this.setState({ query });
+    }
   }
   onChange = (e) => {
     const { value: query } = e.target;
@@ -33,7 +41,7 @@ export class SearchInput extends Component {
 SearchInput.defaultProps = {
   query: '',
   onSearch: (query) => { console.warn('No onSearch provided:', query) },
-  onClear: () => { console.warn('No onClear provided') }, 
+  onClear: () => { console.warn('No onClear provided'); }, 
 }
 
 export default SearchInput;

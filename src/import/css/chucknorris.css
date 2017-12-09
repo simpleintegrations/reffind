@@ -28,7 +28,21 @@
   background-color: beige;
 }
 
-.chuck-result .instructions {
+.chuck-wisdom {
+  text-align: left;
+}
+
+.chuck-wisdom .single-fact {
+  margin: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #AAA;
+  border-radius: 10px;
+  background-color: #DDD;
+  padding: 10px;
+  font-size: larger;
+}
+
+.instructions {
   font-size: smaller;
   text-align: center;
 }

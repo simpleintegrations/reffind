@@ -53,7 +53,7 @@ async function categories() {
 */
 async function randomChuckWithCategory(category) {
   if (category === undefined || category === null || category === '') {
-    throw 'Must supply a "category"';
+    throw new Error('Must supply a "category"');
   } 
   const url = `${baseChuckURL}/random?category=${category}`;
   const result = {
@@ -79,7 +79,7 @@ async function randomChuckWithCategory(category) {
 */
 async function search(query) {
   if (query === undefined || query === null || query === '') {
-    throw 'Must supply a "query"';
+    throw new Error('Must supply a "query"');
   } 
   const url = `${baseChuckURL}/search?query=${query}`;
   const result = {
@@ -89,7 +89,8 @@ async function search(query) {
 
   await axios.get(url)
     .then(response => {
-      result.facts = response.data.result;
+      console.log('search respose:',response);
+      result.facts = response.data.result ? response.data.result : [];
     })
     .catch(error => {
       result.error = error.toString();

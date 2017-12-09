@@ -13,7 +13,7 @@ it('accepts the correct props', () => {
   const props = {
     query: 'monkey wrench',
     onSearch: (query) => {
-      
+      expect(query).toMatch('monkey wrench');
     },
     onClear: () => {
       

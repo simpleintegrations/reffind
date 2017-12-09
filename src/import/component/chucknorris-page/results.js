@@ -1,24 +1,32 @@
 
+import React from 'react';
 
-import React, { Component } from 'react';
+import ChuckFacts from './chuckfacts';
 
-import Instructions from './instructions';
+import Loading from '../common/loading';
+import Wisdom from '../common/wisdom';
+import Oops from '../common/oops';
 
 export const Results = (props) => {
+  console.log('Results:',props);
+  let stateImage = null;
+  if (props.loading) stateImage = <Loading />;
+  else if (props.facts === null) stateImage = <Wisdom />;
+  else if (props.facts.length === 0) stateImage = <Oops />
   return (
     <div className="chuck-result">
       <div>
-        {/*<img src="/oops.gif" width="100px" height="100px" alt="failed ninja"/>*/}
-        <img src="/wise_ninja.gif" width="100px" height="100px" alt="wise ninja"/>
-        {/*<img src="/ninja_fetching.gif" width="71px" height="100px" alt="fetching ninja"/>*/}
+        {stateImage}
       </div>
-      <Instructions />
-      {/*<div className="instructions">
-        The Wisdom is Real. Enter some words above and press <strong>Search</strong> or select
-        from the ancient tablets below. You can also <strong>Clear</strong> your mind.
-      </div>*/}
+      
+      <ChuckFacts facts={props.facts} />
+      
     </div>
   )
+}
+
+Results.defaultProps = {
+  facts: [],
 }
 
 export default Results;
