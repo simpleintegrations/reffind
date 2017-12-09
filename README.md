@@ -61,3 +61,6 @@ TBD
 
 ## Architectural Description
 TBD
+
+## Attribution
+- animated-ninja-image-0002.gif sourced from www.animatedimages.organising
