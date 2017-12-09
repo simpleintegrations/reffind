@@ -3,8 +3,6 @@
 }
 
 .App-logo {
-  /*animation: App-logo-spin infinite 20s linear;*/
-  /*height: 80px;*/
 }
 
 .App-header {
@@ -22,7 +20,16 @@
   font-size: large;
 }
 
-/*@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}*/
+.App-container {
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.App-content {
+  /*border: 1px solid blue;*/
+  background-color: #DDD;
+  padding: 5px;
+  float: left;
+  width: 100%;
+}

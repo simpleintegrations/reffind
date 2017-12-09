@@ -1,6 +1,28 @@
 
+
+.chuck-page {
+  
+}
+
+.chuck-instructions {
+  text-align: left;
+  padding: 5px;
+  font-size: smaller;
+}
+
 .chuck-input {
   padding: 5px;
+}
+
+.chuck-input input {
+  width: 99.3%;
+  height: 36px;
+  font-size: 32px;
+}
+
+.chuck-input button {
+  width: 50%;
+  height: 32px;
 }
 
 .chuck-result {
@@ -19,6 +41,8 @@
 
 .chuck-categories {
   text-align: center;
+  width: 100%;
+  float: left;
 }
 
 .chuck-category-wrapper {
