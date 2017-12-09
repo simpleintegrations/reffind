@@ -6,7 +6,7 @@ import ButtonTile from '../buttontile';
 function getButtons(buttonArray)
 {
   return buttonArray.map((button,b) =>  {
-    return <ButtonTile key={b} text={button} />
+    return <ButtonTile key={b} text={button} number={b+1} />
   });
 }
 
@@ -14,27 +14,19 @@ export const TileSet = (props) => {
   return (
     <div className="chuck-categories">
       {
-        getButtons([
-          'One',
-          'Two',
-          'Three',
-          'Four',
-          'Five',
-          'Six',
-          'Seven',
-          'Eight',
-          'Nine',
-          'Ten',
-          'Eleven',
-          'Twelve',
-          'Thirteen',
-          'Fourteen',
-          'Fifteen',
-          'Sixteen',
-        ])
+        getButtons(props.names)
       }
     </div>
   )
+}
+
+TileSet.defaultProps = {
+  names: [
+    "explicit", "dev", "movie", "food", 
+    "celebrity", "science", "political", "sport", 
+    "religion", "animal", "music", "history", 
+    "travel", "career", "money", "fashion"
+  ],
 }
 
 export default TileSet;

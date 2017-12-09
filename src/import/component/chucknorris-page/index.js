@@ -17,9 +17,9 @@ export class ChuckNorrisPage extends Component {
   render() {
     return (
       <div className="chuck-page">
-        <Instructions />
-        <SearchInput />
+        {/*<Instructions />*/}
         <Results />
+        <SearchInput />
         <TileSet />
       </div>
     )

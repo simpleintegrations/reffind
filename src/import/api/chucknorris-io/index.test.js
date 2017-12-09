@@ -12,33 +12,38 @@ test('should contain the expected properties', () => {
 });
 
 test('should return an correct object when asking for categories', () => {
-  chuckAPI.categories().then(result => {
+  expect.assertions(2);
+  return chuckAPI.categories().then(result => {
     expect(result).toHaveProperty('categories');
     expect(result).toHaveProperty('error');
   });
 });
 
 test('should cause an exception if no "category" supplied to randomChuckWithCategory', () => {
-  chuckAPI.randomChuckWithCategory().catch(err => {
+  expect.assertions(1);
+  return chuckAPI.randomChuckWithCategory().catch(err => {
     expect(err).toBe('Must supply a "category"');
   });
 });
 
 test('should return an correct object when asking for randomChuckWithCategory', () => {
-  chuckAPI.randomChuckWithCategory('dev').then(result => {
+  expect.assertions(2);
+  return chuckAPI.randomChuckWithCategory('dev').then(result => {
     expect(result).toHaveProperty('facts');
     expect(result).toHaveProperty('error');
   });
 });
 
 test('should cause an exception if no "query" supplied to search', () => {
-  chuckAPI.search().catch(err => {
+  expect.assertions(1);
+  return chuckAPI.search().catch(err => {
     expect(err).toBe('Must supply a "query"');
   });
 });
 
 test('should return an correct object when asking for search', () => {
-  chuckAPI.search('monkey wrench').then(result => {
+  expect.assertions(2);
+  return chuckAPI.search('monkey wrench').then(result => {
     expect(result).toHaveProperty('facts');
     expect(result).toHaveProperty('error');
   });

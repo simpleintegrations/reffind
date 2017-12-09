@@ -3,10 +3,9 @@ import React from 'react';
 
 export const Instructions = (props) => {
   return (
-    <div className="chuck-instructions">
-      <div>Enter some text into the box below and press <strong>Search</strong> to Reffind the Wisdom of Chuck Norris.</div>
-      <div><strong>Clear</strong> will clear the any search result and allow you Reffind as much as you want!</div>
-      <div>Click on one of the <strong>Category Tiles</strong> to randomly Reffind the Wisdom of Chuck Norris.</div>
+    <div className="instructions">
+      The Wisdom is Real. Enter some words and <strong>Search for Wisdom</strong> or select
+      from the ancient tablets below. You can also <strong>Clear your Mind</strong>.
     </div>
   )
 }
