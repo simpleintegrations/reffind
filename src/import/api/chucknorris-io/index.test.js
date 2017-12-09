@@ -17,3 +17,16 @@ test('should return an correct object when asking for categories', () => {
     expect(result).toHaveProperty('error');
   });
 });
+
+test('should cause an exception if no "category" supplied to randomChuckWithCategory', () => {
+  chuckAPI.randomChuckWithCategory().catch(err => {
+    expect(err).toBe('Must supply a "category"');
+  });
+});
+
+test('should return an correct object when asking for randomChuckWithCategory', () => {
+  chuckAPI.randomChuckWithCategory('dev').then(result => {
+    expect(result).toHaveProperty('fact');
+    expect(result).toHaveProperty('error');
+  });
+});
