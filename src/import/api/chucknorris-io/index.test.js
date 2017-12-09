@@ -26,7 +26,7 @@ test('should cause an exception if no "category" supplied to randomChuckWithCate
 
 test('should return an correct object when asking for randomChuckWithCategory', () => {
   chuckAPI.randomChuckWithCategory('dev').then(result => {
-    expect(result).toHaveProperty('fact');
+    expect(result).toHaveProperty('facts');
     expect(result).toHaveProperty('error');
   });
 });
