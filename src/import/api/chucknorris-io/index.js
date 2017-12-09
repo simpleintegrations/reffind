@@ -27,7 +27,7 @@ Then you call the functions like this:
 /*
   categories should be an array of category strings
 */
-async function categories() {
+async function categories(sort: false) {
   const url = `${baseChuckURL}/categories`;
   const result = {
     categories: null,
@@ -36,7 +36,7 @@ async function categories() {
 
   return await axios.get(url)
     .then(response => {
-      result.categories = response.data;
+      result.categories = sort ? response.data.sort() : response.data;
       return result;
     })
     .catch(error => {

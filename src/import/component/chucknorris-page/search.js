@@ -29,9 +29,14 @@ export class SearchInput extends Component {
     return (
       <div className="chuck-input">
         <form onSubmit={this.preventDefault}>
-          <input onChange={this.onChange} value={this.state.query}/>
-          <button onClick={() => this.props.onSearch(this.state.query)} type="submit">Search for Wisdom</button>
-          <button onClick={() => this.props.onClear()}>Clear your Mind</button>
+          <div className="field">
+            <input onChange={this.onChange} value={this.state.query}/>
+          </div>
+          <div className="buttons">
+            <button className="search" onClick={() => this.props.onSearch(this.state.query)} type="submit">Search for Wisdom</button>
+            <button className="clear" onClick={() => this.props.onClear()}>Clear your Mind</button>
+          </div>
+          <div style={{ clear: 'both' }} />
         </form>
       </div>
     )

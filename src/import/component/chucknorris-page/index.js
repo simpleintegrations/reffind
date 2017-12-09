@@ -23,7 +23,7 @@ export class ChuckNorrisPage extends Component {
   }
   
   componentDidMount() {
-    chuckAPI.categories()
+    chuckAPI.categories(true)
       .then(result => {
         const stateUpdate = { ...result };
         if (this.state.category === null && stateUpdate.error === null) {
