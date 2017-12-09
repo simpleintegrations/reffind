@@ -35,10 +35,12 @@ export class ChuckNorrisPage extends Component {
   
   onSearch = (query) => {
     this.setState({ query, loading: true, facts: null, error: null, category: null },()=>{
-      chuckAPI.search(this.state.query)
-        .then(stateUpdate => {
-          this.setState({ ...stateUpdate, loading: false });
-        });
+      if (query.length) {
+        chuckAPI.search(this.state.query)
+          .then(stateUpdate => {
+            this.setState({ ...stateUpdate, loading: false });
+          });
+      } else this.setState({ facts: [], loading: false });
     })
   }
   
@@ -47,10 +49,15 @@ export class ChuckNorrisPage extends Component {
   }
   
   onCategorySelect = (category) => {
-    this.setState({ loading: true, facts: null, error: null, category: category, query: '' }, () => {
+    this.setState({ loading: true, error: null, category: category, query: '' }, () => {
       chuckAPI.randomChuckWithCategory(category)
         .then(stateUpdate => {
-          this.setState({ ...stateUpdate, loading: false });
+          // improvement - this allows the CATEGORY tiles to be pressed multiple times
+          if (this.state.facts !== null && stateUpdate.error === null) {
+            this.setState({ facts: [ ...this.state.facts, ...stateUpdate.facts ], loading: false });
+          } else {
+            this.setState({ ...stateUpdate, loading: false });
+          }
         });
     })
   } 

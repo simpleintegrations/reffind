@@ -14,12 +14,13 @@ export const Results = (props) => {
   else if (props.facts.length === 0) stateImage = <Oops />
   return (
     <div className="chuck-result">
+
+      <ChuckFacts facts={props.facts} />
+      
       <div>
         {stateImage}
       </div>
-      
-      <ChuckFacts facts={props.facts} />
-      
+        
     </div>
   )
 }
