@@ -14,19 +14,24 @@ export class SearchInput extends Component {
     const { value: query } = e.target;
     this.setState({ query })
   }
+  preventDefault = (e) => {
+    e.preventDefault();
+  }
   render() {
     return (
       <div className="chuck-input">
-        <input onChange={this.onChange} value={this.state.query}/>
-        <button onClick={() => this.props.onSearch(this.state.query)}>Search</button>
-        <button onClick={() => this.props.onClear()}>Clear</button>
+        <form onSubmit={this.preventDefault}>
+          <input onChange={this.onChange} value={this.state.query}/>
+          <button onClick={() => this.props.onSearch(this.state.query)} type="submit">Search</button>
+          <button onClick={() => this.props.onClear()}>Clear</button>
+        </form>
       </div>
     )
   }
 }
 
 SearchInput.defaultProps = {
-  searchValue: '',
+  query: '',
   onSearch: (query) => { console.warn('No onSearch provided:', query) },
   onClear: () => { console.warn('No onClear provided') }, 
 }

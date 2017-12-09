@@ -16,7 +16,7 @@ class App extends Component {
             <img 
               src="http://www.animatedimages.org/data/media/1387/animated-ninja-image-0002.gif" 
               border="0" 
-              alt="animated-ninja-image-0002" 
+              alt="animated ninja 0002"
             />
           </a>
           <h1 className="App-title">Reffind The Wisdom of Chuck Norris</h1>
