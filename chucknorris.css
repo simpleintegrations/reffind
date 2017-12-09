@@ -1,0 +1,158 @@
+
+
+.chuck-page {
+  
+}
+
+.chuck-input {
+  padding: 5px;
+}
+
+.chuck-input input {
+  width: 99.3%;
+  height: 36px;
+  font-size: 28px;
+}
+
+.chuck-input button {
+  width: 50%;
+  height: 32px;
+}
+
+.chuck-result {
+  min-height: 150px;
+  border: 1px solid #CCC;
+  border-radius: 5px 5px 0 0 ;
+  margin: 5px; 
+  padding: 5px; 
+  background-color: beige;
+}
+
+.chuck-wisdom {
+  text-align: left;
+}
+
+.chuck-wisdom .single-fact {
+  margin: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #AAA;
+  border-radius: 10px;
+  background-color: #DDD;
+  padding: 10px;
+  font-size: larger;
+}
+
+.instructions {
+  font-size: smaller;
+  text-align: center;
+}
+
+.chuck-categories .loading,
+.chuck-result .loading {
+  text-align: center;
+}
+
+.chuck-categories {
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+
+.chuck-category-wrapper {
+  position: relative;
+  float: left;
+  width: 100px; 
+  height: 100px;
+  /*background-color: cyan;*/
+  margin: 5px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.chuck-category-wrapper.rune1 {
+  background-image: url('./scenery1.jpg');
+}
+
+.chuck-category-wrapper.rune2 {
+  background-image: url('./scenery2.jpg');
+}
+
+.chuck-category-wrapper.rune3 {
+  background-image: url('./scenery3.jpg');
+}
+
+.chuck-category-wrapper.rune4 {
+  background-image: url('./scenery4.jpg');
+}
+
+.chuck-category-wrapper.rune5 {
+  background-image: url('./scenery5.jpg');
+}
+
+.chuck-category-wrapper.rune6 {
+  background-image: url('./scenery6.jpg');
+}
+
+.chuck-category-wrapper.rune7 {
+  background-image: url('./scenery7.jpg');
+}
+
+.chuck-category-wrapper.rune8 {
+  background-image: url('./scenery8.jpg');
+}
+
+.chuck-category-wrapper.rune9 {
+  background-image: url('./scenery9.jpg');
+}
+
+.chuck-category-wrapper.rune10 {
+  background-image: url('./scenery10.jpg');
+}
+
+.chuck-category-wrapper.rune11 {
+  background-image: url('./scenery11.jpg');
+}
+
+.chuck-category-wrapper.rune12 {
+  background-image: url('./scenery12.jpg');
+}
+
+.chuck-category-wrapper.rune13 {
+  background-image: url('./scenery13.jpg');
+}
+
+.chuck-category-wrapper.rune14 {
+  background-image: url('./scenery14.jpg');
+}
+
+.chuck-category-wrapper.rune15 {
+  background-image: url('./scenery15.jpg');
+}
+
+.chuck-category-wrapper.rune16 {
+  background-image: url('./scenery16.jpg');
+}
+
+.chuck-category {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #EEE;
+  width: 100%;
+  opacity: 0.7;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.chuck-footer {
+  clear: both;
+  text-align: center;
+}
+
+.chuck-footer small {
+  font-size: 6pt;
+  font-weight: normal;
+}
