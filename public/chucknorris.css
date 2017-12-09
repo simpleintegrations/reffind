@@ -97,10 +97,11 @@
 .chuck-category-wrapper:hover {
   border: 1px solid #900;
   border-radius: 7px;
-  top: -1px;
+  top: 1px;
   left: 1px;
   color: red;
   cursor: pointer;
+  box-shadow: 2px 2px #666;
 }
 
 .chuck-category-wrapper.rune1 {
