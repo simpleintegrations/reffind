@@ -30,3 +30,16 @@ test('should return an correct object when asking for randomChuckWithCategory', 
     expect(result).toHaveProperty('error');
   });
 });
+
+test('should cause an exception if no "query" supplied to search', () => {
+  chuckAPI.search().catch(err => {
+    expect(err).toBe('Must supply a "query"');
+  });
+});
+
+test('should return an correct object when asking for search', () => {
+  chuckAPI.search('monkey wrench').then(result => {
+    expect(result).toHaveProperty('facts');
+    expect(result).toHaveProperty('error');
+  });
+});

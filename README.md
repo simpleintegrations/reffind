@@ -40,6 +40,15 @@ The tech task did not specify any type of web deployment for the project so none
 - change to the directory where you cloned the repo
 - use `npm start` or `yarn start` to run the application
 - navigate to localhost:3000 to view the application
+- the environment watches for changes
+
+## Running the Tests
+- have `npm` or `yarn` installed globally
+- clone the repository to your local dev machine
+- change to the directory where you cloned the repo
+- use `npm test` or `yarn test` to run the tests
+- the tests runner watches for changes
+- view the output in the console
 
 ## Component Structure
 TBD

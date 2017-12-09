@@ -43,7 +43,25 @@ async function randomChuckWithCategory(category) {
   return result;
 }
 
-function search(query) {
+async function search(query) {
+  if (query === undefined || query === null || query === '') {
+    throw 'Must supply a "query"';
+  } 
+  const url = `${baseChuckURL}/search?query=${query}`;
+  const result = {
+    facts: null,
+    error: null,
+  };
+
+  await axios.get(url)
+    .then(response => {
+      result.facts = response.data.result;
+    })
+    .catch(error => {
+      result.error = error.toString();
+    });
+
+  return result;
 }
 
 const ChuckAPI =
