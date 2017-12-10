@@ -93,7 +93,6 @@ The following list attempts to represent the nested nature of the core UI compon
   - `<SearchInput ... />`
   - `<TileSet ... />`
     - `<ButtonTile ... />`
-- </ChuckNorrisPage>
 
 The component root files all implement `export default <ComponentName>` - where `<ComponentName>` is the name of the component to export as the default for the package. This means it can be renamed in the package performing the `import`.  However, the name is generally left the same as the exported name to make it simpler to find related code by searching the code base.
 
