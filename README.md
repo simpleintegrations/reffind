@@ -31,7 +31,7 @@ I am repeating the UI requirements here to ensure that none of them are missed a
 - [x] The user will be shown a list of categories to click on 
 
 ## UI Design
-I took the broad description in the brief to try and bring a "fun" feeling to the site with some Ninja graphics (due to the association of Chuck Norris with martial arts).  That also lead to a decision to bring in some asian scenery to bring a more colourful feel to the tiles.  Where the source of the images used was obvious, appropriate [attribution](#attribution) has been provided at the bottom of the README.
+I took the broad description in the brief to try and bring a "fun" feeling to the site with some Ninja graphics (due to the association of Chuck Norris with martial arts).  That also lead to a decision to bring in some asian scenery to bring a more colourful feel to the tiles.  Where the source of the images used was obvious, appropriate [attribution](#attribution) has been provided at the bottom of the README.  Were this project to be destined for a public environment, additional attribution and/or different images may be required.
 
 The default page and CSS supplied with `create-react-app` was largely reused untouched.  The heading area was reduced in size to optimise the space for the main content. The rest of the design was built from scratch (HTML and CSS) including the styling of the tile `<div>s` into button-like elements.
 
