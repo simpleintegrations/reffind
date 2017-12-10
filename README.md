@@ -30,6 +30,13 @@ I am repeating the UI requirements here to ensure that none of them are missed a
 - [x] Get a random joke based on a category
 - [x] The user will be shown a list of categories to click on 
 
+## UI Design
+I took the broad description in the brief to try and bring a "fun" feeling to the site with some Ninja graphics (due to the association of Chuck Norris with martial arts).  That also lead to a decision to bring in some asian scenery to bring a more colourful feel to the tiles.  Where the source of the images used was obvious, appropriate [attribution](#attribution) has been provided at the bottom of the README.
+
+The default page and CSS supplied with `create-react-app` was largely reused untouched.  The heading area was reduced in size to optimise the space for the main content. The rest of the design was built from scratch (HTML and CSS) including the styling of the tile `<div>s` into button-like elements.
+
+Animated GIFs were used in place of common "spinner" images to provide more theme-based interest.
+
 ## Assessment Criteria
 The following are the documented assessment criteria from the assignment:
 
@@ -63,16 +70,53 @@ The fully operational site is deployed to github pages at http://simpleintegrati
 - view the output in the console
 
 ## Component Structure
-TBD
+The components are stored in the `import` directory and loaded via the ES6 `import` directive.
+
+There are three top level folders for the components with descriptions of the contents nested underneath:
+- __api__ - contains packages that provide middle layer functionality (such as access to the api.chucknorris.io site)
+  - __chucknorris-io__ - the package and tests for access to the api.chucknorris.io site
+- __component__ - contains the UI components
+  - __buttonttile__ - the basic tile used for categories (this is reusable)
+  - __chucknorris-page__ - the "root" component for the project
+  - __common__ - small, pure components that have multi-reuse throughout the project
+  - __tileset__ - the basic wrapper for a set of `buttontile` components
+- __css__ - contains a css import package (although this was not used for the core UI styling due to the decision to host the solution on gh-pages and to make that process simpler)
+
+A package/component is housed in a directory with it's root code included in an `index.js` file. This allows the imported component to then import any addition packages that it may require from the same folder. 
+
+The following list attempts to represent the nested nature of the core UI components (psuedo code - React only: no props, no ancillary HTML tags, no transitory components):
+
+- `<ChuckNorrisPage>`
+  - `<Results ... />`
+    - `<ChuckFacts ... />`
+  - `<Instructions ... />`
+  - `<SearchInput ... />`
+  - `<TileSet ... />`
+    - `<ButtonTile ... />`
+- </ChuckNorrisPage>
+
+The component root files all implement `export default <ComponentName>` - where `<ComponentName>` is the name of the component to export as the default for the package. This means it can be renamed in the package performing the `import`.  However, the name is generally left the same as the exported name to make it simpler to find related code by searching the code base.
+
+There is potential to refactor the `<SearchInput />` component further by breaking out the `<input>` and `<button>` tags but, on consideration, the higher level component is already small enough to be considered complete as a single unit with no real benefit (and possibly detriment) to further dissection.
+
+Another possibility would be to call the `<TileSet />` component `<Categories />` in the root page component. The benefit to doing this would be to potentially make it clearer what the purpose of the component is but the props pass make that reasonably clear.
 
 ## Styling
-TBD
+Aside from the default shell styling of create-react-app (modified slightly for the project), there is a chucknorris.css file in the public folder that contains detailed styling for the various nested pieces.
+
+At a top level, all the class names are prefixed with `chuck-` and nesting within that done as simple names cascading under the root class name.
+
+The stylesheet has been included in the root `index.html` file to ensure that all the resources are easily accessing on `gh-pages`.
 
 ## Testing
-TBD
+The tests focus on the `chucknorris-io` component. There was a considerable struggle doing the pre-development/prototyping research on the site due to some issue with cross-site scripting.
 
-## Architectural Description
-TBD
+## Documentation
+Much of the documentation was written during the pre-code/prototyping stage and evolved during the project. The final pieces of the documentation (Component Structure, Styling, Testing and this section) were completed last.
+
+The React code is largely left uncommented as the approach takes a very standards-based approach to building a small React application.  The component structure is documented [elsewhere](#component-structure) in this README and should serve as a guide to a coder familiar with React.
+
+The `chucknorris-io` API package has more inline comments to provide an overview of what each function expects as parameters and what is returned.
 
 ## Attribution
 - animated-ninja-image-0002.gif sourced from http://www.animatedimages.org
